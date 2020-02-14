@@ -31,7 +31,7 @@ This will dump all output into `testers/test_outputs.txt` for debugging.
 
 It also dumps all road traces from output into `testers/test_roadtraces.txt` for comparison. It is meant to be the way to **compare results with another key road traces file** i.e. from your friend. I provided one in this repo too (`tester/key_roadtraces.txt`). Tell me if it is different from yours!
 
-## *To compare your roadtrace files with key file:
+## *To compare your roadtrace file with key file:
 To compare your roadtraces file with key file:
 ```bash
 python tester.py compare
