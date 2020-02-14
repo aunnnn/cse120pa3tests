@@ -1,6 +1,6 @@
 
 -----TEST1-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 19574
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 21042
 
 N is 1.
 TEST: Car 1 from west
@@ -25,7 +25,7 @@ System exiting (normal)
 ----------------
 
 -----TEST2-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 19690
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 21164
 
 N is 2.
 TEST: Car 1 from east
@@ -50,7 +50,7 @@ System exiting (normal)
 ----------------
 
 -----TEST3-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 19897
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 21412
 
 N is 3.
 TEST: Car 1 and 2 (faster) from west, should be able to go both without crashing
@@ -62,7 +62,6 @@ W1---------E Car 1 enters at 1 at 40 mph
 >> 2 arrives from WEST
 
 W-1--------E Car 1 moves from 1 to 2
-Car 2: First block is FREE.
 W21--------E Car 2 enters at 1 at 60 mph
 W2-1-------E Car 1 moves from 2 to 3
 W-21-------E Car 2 moves from 1 to 2
@@ -90,7 +89,7 @@ System exiting (normal)
 ----------------
 
 -----TEST4-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 20246
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 21557
 
 N is 4.
 TEST: Car 1 from west and 2 from east, 1 should go first then 2
@@ -129,7 +128,7 @@ System exiting (normal)
 ----------------
 
 -----TEST5-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 20413
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 21854
 
 N is 5.
 TEST: Car 1 from west and then with some delay 2 from east (while 1 is still on the road), 1 go first then 2
@@ -141,10 +140,10 @@ W-1--------E Car 1 moves from 1 to 2
 W--1-------E Car 1 moves from 2 to 3
 W---1------E Car 1 moves from 3 to 4
 W----1-----E Car 1 moves from 4 to 5
-W-----1----E Car 1 moves from 5 to 6
 
 >> 2 arrives from EAST
 
+W-----1----E Car 1 moves from 5 to 6
 W------1---E Car 1 moves from 6 to 7
 W-------1--E Car 1 moves from 7 to 8
 W--------1-E Car 1 moves from 8 to 9
@@ -168,7 +167,7 @@ System exiting (normal)
 ----------------
 
 -----TEST6-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 20781
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 22078
 
 N is 6.
 TEST: Car 1 from west, out of road, then car 2 arrives east, 1 go first then 2
@@ -207,7 +206,7 @@ System exiting (normal)
 ----------------
 
 -----TEST7-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 21099
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 22698
 
 N is 7.
 TEST: Car 1 from west, car 2 arrives while 1 on road, car 3 arrives while 2 is on road and 1 is already out, should be able to go
@@ -229,11 +228,10 @@ W--------1-E Car 1 moves from 8 to 9
 W---------1E Car 1 moves from 9 to 10
 W----------E Car 1 exits road
 W---------2E Car 2 enters at 10 at 40 mph
+W--------2-E Car 2 moves from 10 to 9
 
 >> 3 arrives from EAST
 
-W--------2-E Car 2 moves from 10 to 9
-Car 3: First block is FREE.
 W--------23E Car 3 enters at 10 at 60 mph
 W-------2-3E Car 2 moves from 9 to 8
 W-------23-E Car 3 moves from 10 to 9
@@ -261,7 +259,7 @@ System exiting (normal)
 ----------------
 
 -----TEST8-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 21797
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 23199
 
 N is 8.
 TEST: 1 from east, 3 and 4 arrive east and west same time, then 2 arrives west
@@ -292,7 +290,6 @@ W--4-------E Car 4 moves from 2 to 3
 
 >> 2 arrives from WEST
 
-Car 2: First block is FREE.
 W---4------E Car 4 moves from 3 to 4
 W----4-----E Car 4 moves from 4 to 5
 W-----4----E Car 4 moves from 5 to 6
@@ -330,7 +327,7 @@ System exiting (normal)
 ----------------
 
 -----TEST9-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 22611
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 24031
 
 N is 9.
 TEST: 1 from west, then A LOT OF CARS arrive east.
@@ -346,19 +343,16 @@ W----1-----E Car 1 moves from 4 to 5
 >> 2 arrives from EAST
 
 W-----1----E Car 1 moves from 5 to 6
+W------1---E Car 1 moves from 6 to 7
 
 >> 3 arrives from EAST
 
-W------1---E Car 1 moves from 6 to 7
-
->> 5 arrives from EAST
-
-W-------1--E Car 1 moves from 7 to 8
 
 >> 4 arrives from EAST
 
+W-------1--E Car 1 moves from 7 to 8
 
->> 7 arrives from EAST
+>> 5 arrives from EAST
 
 W--------1-E Car 1 moves from 8 to 9
 
@@ -368,102 +362,98 @@ W--------1-E Car 1 moves from 8 to 9
 >> 8 arrives from EAST
 
 
+>> 7 arrives from EAST
+
+
 >> 9 arrives from EAST
 
 W---------1E Car 1 moves from 9 to 10
 W----------E Car 1 exits road
 W---------2E Car 2 enters at 10 at 100 mph
 W--------2-E Car 2 moves from 10 to 9
-Car 3: First block is FREE.
 W--------23E Car 3 enters at 10 at 50 mph
 W-------2-3E Car 2 moves from 9 to 8
 W------2--3E Car 2 moves from 8 to 7
-W------2-3-E Car 3 moves from 10 to 9
-Car 5: First block is FREE.
-W------2-35E Car 5 enters at 10 at 100 mph
-W-----2--35E Car 2 moves from 7 to 6
-W----2---35E Car 2 moves from 6 to 5
-W----2--3-5E Car 3 moves from 9 to 8
-W---2---3-5E Car 2 moves from 5 to 4
-W---2---35-E Car 5 moves from 10 to 9
-Car 4: First block is FREE.
-W---2---354E Car 4 enters at 10 at 50 mph
-W--2----354E Car 2 moves from 4 to 3
-W--2---3-54E Car 3 moves from 8 to 7
-W-2----3-54E Car 2 moves from 3 to 2
-W-2----35-4E Car 5 moves from 9 to 8
-W2-----35-4E Car 2 moves from 2 to 1
-W------35-4E Car 2 exits road
-W-----3-5-4E Car 3 moves from 7 to 6
-W-----3-54-E Car 4 moves from 10 to 9
-Car 7: First block is FREE.
-W-----3-547E Car 7 enters at 10 at 100 mph
-W-----35-47E Car 5 moves from 8 to 7
-W----3-5-47E Car 3 moves from 6 to 5
-W----35--47E Car 5 moves from 7 to 6
-W----35-4-7E Car 4 moves from 9 to 8
-W---3-5-4-7E Car 3 moves from 5 to 4
-W---3-5-47-E Car 7 moves from 10 to 9
-Car 6: First block is FREE.
-W---3-5-476E Car 6 enters at 10 at 150 mph
-W---35--476E Car 5 moves from 6 to 5
-W---35-4-76E Car 4 moves from 8 to 7
-W---35-47-6E Car 7 moves from 9 to 8
-W--3-5-47-6E Car 3 moves from 4 to 3
-W--3-5-476-E Car 6 moves from 10 to 9
-Car 8: First block is FREE.
-W--3-5-4768E Car 8 enters at 10 at 100 mph
-W--3-54-768E Car 4 moves from 7 to 6
-W--35-4-768E Car 5 moves from 5 to 4
-W--35-47-68E Car 7 moves from 8 to 7
-W-3-5-47-68E Car 3 moves from 3 to 2
-W-3-5-476-8E Car 6 moves from 9 to 8
-W-3-54-76-8E Car 4 moves from 6 to 5
-W-35-4-76-8E Car 5 moves from 4 to 3
-W-35-4-768-E Car 8 moves from 10 to 9
-Car 9: First block is FREE.
-W-35-4-7689E Car 9 enters at 10 at 70 mph
-W-35-47-689E Car 7 moves from 7 to 6
-W3-5-47-689E Car 3 moves from 2 to 1
-W3-5-476-89E Car 6 moves from 8 to 7
-W3-54-76-89E Car 4 moves from 5 to 4
-W35-4-76-89E Car 5 moves from 3 to 2
-W35-4-768-9E Car 8 moves from 9 to 8
-W35-47-68-9E Car 7 moves from 6 to 5
-W-5-47-68-9E Car 3 exits road
-W-5-476-8-9E Car 6 moves from 7 to 6
-W-5-476-89-E Car 9 moves from 10 to 9
-W-54-76-89-E Car 4 moves from 4 to 3
-W5-4-76-89-E Car 5 moves from 2 to 1
-W5-4-768-9-E Car 8 moves from 8 to 7
-W5-47-68-9-E Car 7 moves from 5 to 4
-W--47-68-9-E Car 5 exits road
-W--476-8-9-E Car 6 moves from 6 to 5
-W--476-89--E Car 9 moves from 9 to 8
-W-4-76-89--E Car 4 moves from 3 to 2
-W-4-768-9--E Car 8 moves from 7 to 6
-W-47-68-9--E Car 7 moves from 4 to 3
-W-476-8-9--E Car 6 moves from 5 to 4
-W4-76-8-9--E Car 4 moves from 2 to 1
-W4-76-89---E Car 9 moves from 8 to 7
-W4-768-9---E Car 8 moves from 6 to 5
-W47-68-9---E Car 7 moves from 3 to 2
-W-7-68-9---E Car 4 exits road
-W-76-8-9---E Car 6 moves from 4 to 3
-W-76-89----E Car 9 moves from 7 to 6
-W-768-9----E Car 8 moves from 5 to 4
-W7-68-9----E Car 7 moves from 2 to 1
-W76-8-9----E Car 6 moves from 3 to 2
-W76-89-----E Car 9 moves from 6 to 5
-W-6-89-----E Car 7 exits road
-W-68-9-----E Car 8 moves from 4 to 3
-W6-8-9-----E Car 6 moves from 2 to 1
-W--8-9-----E Car 6 exits road
-W-8--9-----E Car 8 moves from 3 to 2
-W-8-9------E Car 9 moves from 5 to 4
-W8--9------E Car 8 moves from 2 to 1
-W8-9-------E Car 9 moves from 4 to 3
-W--9-------E Car 8 exits road
+W-----2---3E Car 2 moves from 7 to 6
+W-----2--3-E Car 3 moves from 10 to 9
+W-----2--34E Car 4 enters at 10 at 50 mph
+W----2---34E Car 2 moves from 6 to 5
+W----2--3-4E Car 3 moves from 9 to 8
+W---2---3-4E Car 2 moves from 5 to 4
+W--2----3-4E Car 2 moves from 4 to 3
+W--2---3--4E Car 3 moves from 8 to 7
+W--2---3-4-E Car 4 moves from 10 to 9
+W--2---3-45E Car 5 enters at 10 at 100 mph
+W-2----3-45E Car 2 moves from 3 to 2
+W2-----3-45E Car 2 moves from 2 to 1
+W2-----34-5E Car 4 moves from 9 to 8
+W2----3-4-5E Car 3 moves from 7 to 6
+W-----3-4-5E Car 2 exits road
+W-----3-45-E Car 5 moves from 10 to 9
+W-----3-456E Car 6 enters at 10 at 150 mph
+W----3--456E Car 3 moves from 6 to 5
+W----3-4-56E Car 4 moves from 8 to 7
+W----3-45-6E Car 5 moves from 9 to 8
+W----3-456-E Car 6 moves from 10 to 9
+W----3-4568E Car 8 enters at 10 at 100 mph
+W----34-568E Car 4 moves from 7 to 6
+W---3-4-568E Car 3 moves from 5 to 4
+W---3-45-68E Car 5 moves from 8 to 7
+W---3-456-8E Car 6 moves from 9 to 8
+W--3--456-8E Car 3 moves from 4 to 3
+W--3-4-56-8E Car 4 moves from 6 to 5
+W--3-4-568-E Car 8 moves from 10 to 9
+W--3-4-5687E Car 7 enters at 10 at 100 mph
+W--3-45-687E Car 5 moves from 7 to 6
+W--3-456-87E Car 6 moves from 8 to 7
+W--34-56-87E Car 4 moves from 5 to 4
+W--34-568-7E Car 8 moves from 9 to 8
+W-3-4-568-7E Car 3 moves from 3 to 2
+W-3-4-5687-E Car 7 moves from 10 to 9
+W-3-4-56879E Car 9 enters at 10 at 70 mph
+W-3-45-6879E Car 5 moves from 6 to 5
+W-3-456-879E Car 6 moves from 7 to 6
+W-34-56-879E Car 4 moves from 4 to 3
+W3-4-56-879E Car 3 moves from 2 to 1
+W3-4-568-79E Car 8 moves from 8 to 7
+W3-45-68-79E Car 5 moves from 5 to 4
+W3-456-8-79E Car 6 moves from 6 to 5
+W3-456-87-9E Car 7 moves from 9 to 8
+W34-56-87-9E Car 4 moves from 3 to 2
+W-4-56-87-9E Car 3 exits road
+W-4-568-7-9E Car 8 moves from 7 to 6
+W-4-568-79-E Car 9 moves from 10 to 9
+W-45-68-79-E Car 5 moves from 4 to 3
+W-456-8-79-E Car 6 moves from 5 to 4
+W-456-87-9-E Car 7 moves from 8 to 7
+W4-56-87-9-E Car 4 moves from 2 to 1
+W4-568-7-9-E Car 8 moves from 6 to 5
+W4-568-79--E Car 9 moves from 9 to 8
+W45-68-79--E Car 5 moves from 3 to 2
+W45-687-9--E Car 7 moves from 7 to 6
+W456-87-9--E Car 6 moves from 4 to 3
+W-56-87-9--E Car 4 exits road
+W-568-7-9--E Car 8 moves from 5 to 4
+W-568-79---E Car 9 moves from 8 to 7
+W5-68-79---E Car 5 moves from 2 to 1
+W5-687-9---E Car 7 moves from 6 to 5
+W56-87-9---E Car 6 moves from 3 to 2
+W-6-87-9---E Car 5 exits road
+W-68-7-9---E Car 8 moves from 4 to 3
+W-68-79----E Car 9 moves from 7 to 6
+W6-8-79----E Car 6 moves from 2 to 1
+W--8-79----E Car 6 exits road
+W--87-9----E Car 7 moves from 5 to 4
+W-8-7-9----E Car 8 moves from 3 to 2
+W-8-79-----E Car 9 moves from 6 to 5
+W-87-9-----E Car 7 moves from 4 to 3
+W8-7-9-----E Car 8 moves from 2 to 1
+W87--9-----E Car 7 moves from 3 to 2
+W-7--9-----E Car 8 exits road
+W-7-9------E Car 9 moves from 5 to 4
+W7--9------E Car 7 moves from 2 to 1
+W7-9-------E Car 9 moves from 4 to 3
+W--9-------E Car 7 exits road
 W-9--------E Car 9 moves from 3 to 2
 W9---------E Car 9 moves from 2 to 1
 W----------E Car 9 exits road
@@ -474,7 +464,7 @@ System exiting (normal)
 ----------------
 
 -----TEST10-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 23946
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 25435
 
 N is 10.
 TEST: 1 slowly from west, 2,3,4 closely arrive east, 5 then enter from west, should go after 2, i.e. 1,2,5,3,4
@@ -500,14 +490,12 @@ W------1---E Car 1 moves from 6 to 7
 
 >> 5 arrives from WEST
 
-Car 5: First block is FREE.
 W-------1--E Car 1 moves from 7 to 8
 W--------1-E Car 1 moves from 8 to 9
 W---------1E Car 1 moves from 9 to 10
 W----------E Car 1 exits road
 W---------2E Car 2 enters at 10 at 100 mph
 W--------2-E Car 2 moves from 10 to 9
-Car 3: First block is FREE.
 W-------2--E Car 2 moves from 9 to 8
 W------2---E Car 2 moves from 8 to 7
 W-----2----E Car 2 moves from 7 to 6
@@ -530,15 +518,14 @@ W---------5E Car 5 moves from 9 to 10
 W----------E Car 5 exits road
 W---------3E Car 3 enters at 10 at 50 mph
 W--------3-E Car 3 moves from 10 to 9
-Car 4: First block is FREE.
 W--------34E Car 4 enters at 10 at 50 mph
 W-------3-4E Car 3 moves from 9 to 8
-W-------34-E Car 4 moves from 10 to 9
-W------3-4-E Car 3 moves from 8 to 7
-W------34--E Car 4 moves from 9 to 8
-W-----3-4--E Car 3 moves from 7 to 6
-W-----34---E Car 4 moves from 8 to 7
-W----3-4---E Car 3 moves from 6 to 5
+W------3--4E Car 3 moves from 8 to 7
+W------3-4-E Car 4 moves from 10 to 9
+W-----3--4-E Car 3 moves from 7 to 6
+W-----3-4--E Car 4 moves from 9 to 8
+W----3--4--E Car 3 moves from 6 to 5
+W----3-4---E Car 4 moves from 8 to 7
 W---3--4---E Car 3 moves from 5 to 4
 W---3-4----E Car 4 moves from 7 to 6
 W--3--4----E Car 3 moves from 4 to 3
@@ -558,7 +545,7 @@ System exiting (normal)
 ----------------
 
 -----TEST11-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 24543
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 26100
 
 N is 11.
 TEST: 1 slowly from west, 2,3,4 closely from east, 5,6,7 closely from west, should take turn.
@@ -572,21 +559,20 @@ W---1------E Car 1 moves from 3 to 4
 
 >> 2 arrives from EAST
 
-W----1-----E Car 1 moves from 4 to 5
 
 >> 3 arrives from EAST
 
-W-----1----E Car 1 moves from 5 to 6
+W----1-----E Car 1 moves from 4 to 5
 
 >> 4 arrives from EAST
+
+W-----1----E Car 1 moves from 5 to 6
+
+>> 6 arrives from WEST
 
 W------1---E Car 1 moves from 6 to 7
 
 >> 5 arrives from WEST
-
-Car 5: First block is FREE.
-
->> 6 arrives from WEST
 
 W-------1--E Car 1 moves from 7 to 8
 W--------1-E Car 1 moves from 8 to 9
@@ -597,7 +583,6 @@ W---------1E Car 1 moves from 9 to 10
 W----------E Car 1 exits road
 W---------2E Car 2 enters at 10 at 100 mph
 W--------2-E Car 2 moves from 10 to 9
-Car 3: First block is FREE.
 W-------2--E Car 2 moves from 9 to 8
 W------2---E Car 2 moves from 8 to 7
 W-----2----E Car 2 moves from 7 to 6
@@ -607,33 +592,8 @@ W--2-------E Car 2 moves from 4 to 3
 W-2--------E Car 2 moves from 3 to 2
 W2---------E Car 2 moves from 2 to 1
 W----------E Car 2 exits road
-W5---------E Car 5 enters at 1 at 50 mph
-W-5--------E Car 5 moves from 1 to 2
-Car 6: First block is FREE.
-W--5-------E Car 5 moves from 2 to 3
-W---5------E Car 5 moves from 3 to 4
-W----5-----E Car 5 moves from 4 to 5
-W-----5----E Car 5 moves from 5 to 6
-W------5---E Car 5 moves from 6 to 7
-W-------5--E Car 5 moves from 7 to 8
-W--------5-E Car 5 moves from 8 to 9
-W---------5E Car 5 moves from 9 to 10
-W----------E Car 5 exits road
-W---------3E Car 3 enters at 10 at 50 mph
-W--------3-E Car 3 moves from 10 to 9
-Car 4: First block is FREE.
-W-------3--E Car 3 moves from 9 to 8
-W------3---E Car 3 moves from 8 to 7
-W-----3----E Car 3 moves from 7 to 6
-W----3-----E Car 3 moves from 6 to 5
-W---3------E Car 3 moves from 5 to 4
-W--3-------E Car 3 moves from 4 to 3
-W-3--------E Car 3 moves from 3 to 2
-W3---------E Car 3 moves from 2 to 1
-W----------E Car 3 exits road
 W6---------E Car 6 enters at 1 at 70 mph
 W-6--------E Car 6 moves from 1 to 2
-Car 7: First block is FREE.
 W--6-------E Car 6 moves from 2 to 3
 W---6------E Car 6 moves from 3 to 4
 W----6-----E Car 6 moves from 4 to 5
@@ -643,6 +603,28 @@ W-------6--E Car 6 moves from 7 to 8
 W--------6-E Car 6 moves from 8 to 9
 W---------6E Car 6 moves from 9 to 10
 W----------E Car 6 exits road
+W---------3E Car 3 enters at 10 at 50 mph
+W--------3-E Car 3 moves from 10 to 9
+W-------3--E Car 3 moves from 9 to 8
+W------3---E Car 3 moves from 8 to 7
+W-----3----E Car 3 moves from 7 to 6
+W----3-----E Car 3 moves from 6 to 5
+W---3------E Car 3 moves from 5 to 4
+W--3-------E Car 3 moves from 4 to 3
+W-3--------E Car 3 moves from 3 to 2
+W3---------E Car 3 moves from 2 to 1
+W----------E Car 3 exits road
+W5---------E Car 5 enters at 1 at 50 mph
+W-5--------E Car 5 moves from 1 to 2
+W--5-------E Car 5 moves from 2 to 3
+W---5------E Car 5 moves from 3 to 4
+W----5-----E Car 5 moves from 4 to 5
+W-----5----E Car 5 moves from 5 to 6
+W------5---E Car 5 moves from 6 to 7
+W-------5--E Car 5 moves from 7 to 8
+W--------5-E Car 5 moves from 8 to 9
+W---------5E Car 5 moves from 9 to 10
+W----------E Car 5 exits road
 W---------4E Car 4 enters at 10 at 50 mph
 W--------4-E Car 4 moves from 10 to 9
 W-------4--E Car 4 moves from 9 to 8
@@ -672,7 +654,7 @@ System exiting (normal)
 ----------------
 
 -----TEST12-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 25485
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 27261
 
 N is 12.
 TEST: From discussion, 1 arrives west but VERY slow. 2 arrives west too but CANNOT take off. Then 3 arrives east so it can go before 2
@@ -687,7 +669,6 @@ W1---------E Car 1 enters at 1 at 10 mph
 >> 3 arrives from EAST
 
 W-1--------E Car 1 moves from 1 to 2
-Car 2: First block is FREE.
 W--1-------E Car 1 moves from 2 to 3
 W---1------E Car 1 moves from 3 to 4
 W----1-----E Car 1 moves from 4 to 5
@@ -726,7 +707,7 @@ System exiting (normal)
 ----------------
 
 -----TEST13-----
-Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 26304
+Umix (User-Mode Unix) CSE120 Instructional OS v. 4.05 1/30/20-14:02 27863
 
 N is 13.
 TEST: 1,2,3 closely arrive at west, but then 4 arrives at east, 4 should be able to go
@@ -738,28 +719,26 @@ W-1--------E Car 1 moves from 1 to 2
 
 >> 2 arrives from WEST
 
-Car 2: First block is FREE.
 W21--------E Car 2 enters at 1 at 50 mph
 W2-1-------E Car 1 moves from 2 to 3
 
 >> 4 arrives from EAST
 
-W2--1------E Car 1 moves from 3 to 4
-W-2-1------E Car 2 moves from 1 to 2
 
 >> 3 arrives from WEST
 
-Car 3: First block is FREE.
+W-21-------E Car 2 moves from 1 to 2
+W-2-1------E Car 1 moves from 3 to 4
 W-2--1-----E Car 1 moves from 4 to 5
 W--2-1-----E Car 2 moves from 2 to 3
 W--2--1----E Car 1 moves from 5 to 6
 W---2-1----E Car 2 moves from 3 to 4
 W---2--1---E Car 1 moves from 6 to 7
 W----2-1---E Car 2 moves from 4 to 5
-W-----21---E Car 2 moves from 5 to 6
-W-----2-1--E Car 1 moves from 7 to 8
-W------21--E Car 2 moves from 6 to 7
-W------2-1-E Car 1 moves from 8 to 9
+W----2--1--E Car 1 moves from 7 to 8
+W-----2-1--E Car 2 moves from 5 to 6
+W-----2--1-E Car 1 moves from 8 to 9
+W------2-1-E Car 2 moves from 6 to 7
 W------2--1E Car 1 moves from 9 to 10
 W-------2-1E Car 2 moves from 7 to 8
 W-------2--E Car 1 exits road
