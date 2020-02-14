@@ -1,6 +1,8 @@
 # cse120pa3tests
 Testing utilities for PA3. Use it at your own risk!
 
+*IMPORTANT: DON'T clone this repo directly, but manually copy it to the server (i.e. with VS Code). Just in case git would mess things up, unless you're a git master.*
+
 ## Installation
 
 Put `pa3tests.c` and `tester.py` under your `pa3` folder.
@@ -58,4 +60,4 @@ Lastly, in `tester.py`, just update `N_tests` to reflect the right number of tes
 As you can see there's no magic here. When you pass env variable `N`, it just runs any function at index `N-1` in `func_ptr` array of test functions. Rename function any way you want.
 
 ## Collaboration
-Feel free to open PR for new tests, or bugs. Or just to discuss particular test cases or outputs.
+Feel free to open PR for new test, or bug. Or just to discuss particular test cases or outputs. NOT A PLACE TO DISCUSS SOLUTION ITSELF, BUT TEST CASE.
