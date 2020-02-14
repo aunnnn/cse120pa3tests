@@ -1,7 +1,9 @@
 # cse120pa3tests
 Testing utilities for PA3. Use it at your own risk!
 
-*IMPORTANT: DON'T clone this repo directly, but manually copy it to the server (i.e. with VS Code). Just in case git would mess things up, unless you're a git master.*
+*PS: This repo contains only test cases and a script to run them and generate outputs for comparison. THERE IS NO SOLUTION HERE.*
+
+*PS 2: DON'T clone this repo directly, but manually copy it to the server (i.e. with VS Code). Just in case git would mess things up, unless you're a git master.*
 
 ## Installation
 
