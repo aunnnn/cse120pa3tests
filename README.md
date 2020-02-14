@@ -20,10 +20,6 @@ Run `make pa3tests` and it will build `pa3tests`. Then you can run a target test
 N=1 ./pa3tests
 ```
 
-**PS: You have to comment out** `Main()` **function of your** `pa3d.c` before running `make pa3tests`, else there'll be error as they're conflicting with `Main()` from `pa3tests.c`.
-
-**DON'T FORGET to get it back when you submit, just to be safe.**
-
 ## To run all tests
 To run all 13 tests automatically:
 ```bash

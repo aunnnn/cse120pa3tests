@@ -1,5 +1,9 @@
 #include <stdlib.h>
+
+// Ignore Main from pa3d.c (Idea from https://github.com/zerotrac/CSE120-PA3Test)
+#define Main UselessMain
 #include "pa3d.c"
+#undef Main
 
 void InitRoad(void);
 void driveRoad(int from, int mph);
